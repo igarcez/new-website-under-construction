@@ -1,0 +1,52 @@
+// font-face
+=font-face($family, $path, $svg, $weight: normal, $style: normal)
+  @font-face
+    font-family: $family
+    src: url('#{$path}.eot')
+    src: url('#{$path}.eot?#iefix') format('embedded-opentype'), url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype'), url('#{$path}.svg##{$svg}') format('svg')
+    font-weight: $weight
+    font-style: $style
+// use +font-face('Miso', '../fonts/miso-webfont', 'miso')
+
+// placeholder
+=placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+
+// selection
+=selection
+  &::-moz-selection
+    @content
+  &::selection
+    @content
+
+// vertical gradient
+// use +gradient(#F47700, 0%, #934300, 100%)
+=gradient($fromColor, $posFirst, $toColor, $posLast)
+  background-color: $toColor
+  background-image: -webkit-gradient(linear, left top, left top, from($fromColor), to($toColor))
+  background-image: -webkit-linear-gradient(to bottom, $fromColor $posFirst, $toColor $posLast)
+  background-image:    -moz-linear-gradient(to bottom, $fromColor $posFirst, $toColor $posLast)
+  background-image:     -ms-linear-gradient(to bottom, $fromColor $posFirst, $toColor $posLast)
+  background-image:      -o-linear-gradient(to bottom, $fromColor $posFirst, $toColor $posLast)
+  background-image:         linear-gradient(to bottom, $fromColor $posFirst, $toColor $posLast)
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}')
+
+// transform rotate use it like +rotate(100deg)
+=rotate($value)
+  -webkit-transform: rotate($value)
+  -moz-transform: rotate($value)
+  -o-transform: rotate($value)
+  -ms-transform: rotate($value)
+  transform: rotate($value)
+
+=border-radius($value)
+  -webkit-border-radius: $value
+  -moz-border-radius: $value
+  border-radius: $value
