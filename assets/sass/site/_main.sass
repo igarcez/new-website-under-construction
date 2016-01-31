@@ -7,6 +7,18 @@
   top: 0
   left: 0
   background-color: $blue-light
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background-image: url(#{$images-path}white_worker.png)
+    background-repeat: no-repeat
+    background-position: -300px 0
+    opacity: 0.3
+
 
 .splash
   width: 80%
@@ -32,4 +44,4 @@
   position: absolute
   top: 88%
   background-color: $cream
-  z-index: 2
+  z-index: 3
