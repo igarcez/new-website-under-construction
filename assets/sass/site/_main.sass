@@ -16,9 +16,8 @@
     right: 0
     background-image: url(#{$images-path}white_worker.png)
     background-repeat: no-repeat
-    background-position: -300px 0
+    background-position: -300px 100px
     opacity: 0.3
-
 
 .splash
   width: 80%
@@ -45,3 +44,40 @@
   top: 88%
   background-color: $cream
   z-index: 3
+
+.content
+  padding: rem(15)
+
+.footer
+  padding: rem(15)
+  text-align: center
+  background-color: $blue
+  color: $white
+  a
+    color: $cream
+
+.fa-google-plus
+  color: #db4437
+.fa-twitter
+  color: #55acee
+.fa-linkedin
+  background-color: #1B86BD
+  color: $white
+  padding: rem(2) rem(4)
+  border-radius: rem(5)
+
+
+@media #{$md}
+  .splash
+    width: 50%
+  .content-wrapper
+    width: 100%
+  .content
+    .content-head,
+    .pure-g
+      max-width: rem(1224)
+      margin: 0 auto
+
+@media #{$lg}
+  .splash
+    width: 30%

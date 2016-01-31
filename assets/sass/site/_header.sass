@@ -1,8 +1,20 @@
 .pure-menu
   background-color: $blue
 
-.pure-menu-heading
+.pure-menu-heading, .home-menu ul li a
   color: $cream
-  padding: rem(20) rem(15)
+  padding: 0 rem(15)
   text-transform: none
   font-size: rem(24)
+  height: rem(68)
+  line-height: rem(68)
+
+
+.home-menu ul li a
+  font-size: rem(12)
+
+@media #{$md}
+  .home-menu ul
+    float: right
+    li a
+      font-size: rem(18)
